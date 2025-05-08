@@ -58,3 +58,9 @@ function resetGame() {
     score = 0;
     scoreDisplay.textContent = "0";
 }
+
+document.addEventListener("keydown", function () {
+    velocity = jumping;
+});
+
+update();
