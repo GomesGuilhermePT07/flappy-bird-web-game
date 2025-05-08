@@ -23,7 +23,7 @@ body{
     position: relative;
     width: 400px;
     height: 550px;
-    background-color: #fff;
+    background: linear-gradient(to bottom, #87ceeb, #fff);
     overflow: hidden;
     border: 3px solid #000;
 }
@@ -34,6 +34,7 @@ body{
     top: 200px;
     left: 50px;
     transform: scaleX(-1); 
+    z-index: 1;
 }  
 
 .pipe{
@@ -46,12 +47,14 @@ body{
     top: 0;
     height: 200px;
     left: 400px;
+    z-index: 1;
 }
 
 #pipe-bottom{
     bottom: 0;
     height: 200px;
     left: 400px;
+    z-index: 1;
 }
 
 #score{
@@ -60,6 +63,7 @@ body{
     left: 10px;
     font-size: 24px;
     font-weight: bold;
+    z-index: 1;
 }
 
 .logo-png{
@@ -96,4 +100,44 @@ body{
     height: 20px;
     opacity: 0.5;
     margin-bottom: -0.2rem;
+}
+
+.cloud {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: cloudMove 60s linear infinite;
+    z-index: 0;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 60px;
+    height: 60px;
+    left: -30px;
+    top: 10px;
+}
+
+.cloud::after {
+    width: 40px;
+    height: 40px;
+    left: 30px;
+    top: 20px;
+}
+
+@keyframes cloudMove {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -200px;
+    }
 }
