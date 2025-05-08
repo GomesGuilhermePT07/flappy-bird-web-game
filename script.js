@@ -16,3 +16,24 @@ let score = 0;
 function randomPipeHeight() {
     return Math.floor(Math.random() * 250) + 50;
 }
+
+function update() {
+    velocity += gravity;
+    birdTop += velocity;
+    bird.style.top = birdTop + "px";
+
+    pipeLeft -= 2;
+
+    if (pipeLeft < -60) {
+        pipeLeft = 400;
+        pipeHeight = randomPipeHeight();
+        score++;
+        scoreDisplay.textContent = score;
+    }
+
+    pipeTop.style.left = pipeLeft + "px";
+    pipeTop.style.height = pipeHeight + "px";
+
+    pipeBottom.style.left = pipeLeft + "px";
+    pipeBottom.style.height = (600 - pipeHeight - pipeGap) + "px";
+}
