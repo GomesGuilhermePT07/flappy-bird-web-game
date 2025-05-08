@@ -36,4 +36,16 @@ function update() {
 
     pipeBottom.style.left = pipeLeft + "px";
     pipeBottom.style.height = (600 - pipeHeight - pipeGap) + "px";
+
+    // Colisão
+    if (
+        birdTop < 0 ||
+        birdTop + 30 > 600 ||
+        (pipeLeft < 80 && pipeLeft + 60 > 50 &&
+            (birdTop < pipeHeight || birdTop + 30 > pipeHeight + pipeGap))
+    ) {
+        resetGame();
+    }
+
+    requestAnimationFrame(update);
 }
