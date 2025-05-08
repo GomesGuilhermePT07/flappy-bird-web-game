@@ -38,6 +38,24 @@ body{
     left: 50px;
 }
 
+.pipe{
+    position: absolute;
+    width: 60px;
+    background: green;
+}
+
+#pipe-top{
+    top: 0;
+    height: 200px;
+    left: 400px;
+}
+
+#pipe-bottom{
+    bottom: 0;
+    height: 200px;
+    left: 400px;
+}
+
 .logo-png{
     position: fixed;
     top: 50px;
