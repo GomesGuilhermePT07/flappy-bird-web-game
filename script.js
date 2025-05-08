@@ -9,7 +9,7 @@ let velocity = 0;
 let gravity = 0.6;
 let jumping = -10;
 let pipeLeft = 400;
-let pipeGap = 150;
+let pipeGap = 200;
 let pipeHeight = randomPipeHeight();
 let score = 0;
 
