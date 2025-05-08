@@ -49,3 +49,12 @@ function update() {
 
     requestAnimationFrame(update);
 }
+
+function resetGame() {
+    alert("Game Over! Pontuação: " + score);
+    birdTop = 200;
+    velocity = 0;
+    pipeLeft = 400;
+    score = 0;
+    scoreDisplay.textContent = "0";
+}
