@@ -1,17 +1,41 @@
-*{
-    font-family: 'Gill Sans MT';
-    margin: 0;
-    padding: 0;
-}
-
 :root{
     --color-purple: #a259ff;
     --color-dark1: #333;
     --color-dark2: #555;
 }
 
+*{
+    font-family: 'Gill Sans MT';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: var(--color-dark1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game{
+    position: relative;
+    width: 400px;
+    height: 550px;
+    background-color: #fff;
+    overflow: hidden;
+    border: 3px solid #000;
+}
+
+#bird{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    border: 50%;
+    top: 200px;
+    left: 50px;
 }
 
 .logo-png{
