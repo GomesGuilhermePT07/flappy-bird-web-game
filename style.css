@@ -30,13 +30,11 @@ body{
 
 #bird{
     position: absolute;
-    width: 30px;
-    height: 30px;
-    background: yellow;
-    border: 50%;
+    font-size: 30px;
     top: 200px;
     left: 50px;
-}
+    transform: scaleX(-1); /* Espelha o emoji horizontalmente */
+}  
 
 .pipe{
     position: absolute;
